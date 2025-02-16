@@ -182,12 +182,16 @@ article.field .desc {
   background-color: #ff5b2e;
 }
 
+.container label {
+  display: block;
+}
+
 .container.form-container label {
   padding-left: 2rem;
   color: #000958;
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   font-weight: 600;
-  line-height: 2rem;
+  line-height: 3.4rem; /* 154.545% */
 }
 
 .container.form-container .subs-form input::placeholder {
@@ -237,5 +241,50 @@ article.field .desc {
 }
 
 .container.form-container .subs-form .email-submit:hover + .email-submit-btn {
+  box-shadow: 0px 13px 26px -8px rgba(255, 91, 46, 0.42);
+}
+
+.container.form-container .subs-form.potm-form {
+  display: flex;
+}
+
+.container.form-container .subs-form.potm-form .jar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.container.form-container .subs-form.potm-form .jar:not(:first-of-type) {
+  margin-left: 2rem;
+}
+
+.container.form-container .subs-form.potm-form .jar input {
+  height: 100%;
+}
+
+.container.form-container .subs-form.potm-form .jar label {
+  padding-left: 0rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.8rem; /* 100% */
+}
+
+.container.form-container .subs-form.potm-form .potm-submit {
+  margin-left: 5rem;
+  cursor: pointer;
+  width: 11.6rem;
+  height: 4.8rem;
+  border-radius: 0.6rem;
+  background-color: #ff5b2e;
+  outline: none;
+  color: white;
+  border: none;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.6rem; /* 100% */
+}
+
+.container.form-container .subs-form.potm-form .potm-submit:hover {
   box-shadow: 0px 13px 26px -8px rgba(255, 91, 46, 0.42);
 }
