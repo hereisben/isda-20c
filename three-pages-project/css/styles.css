@@ -1,0 +1,241 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  background: #fffaf5;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding-bottom: 3rem;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-family: "Sora", sans-serif;
+}
+
+h1.heading {
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000958;
+  font-size: 5.2rem;
+  font-weight: 700;
+}
+
+h2.heading {
+  user-select: none;
+  color: #000958;
+  font-family: "Sora", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.8rem; /* 100% */
+}
+
+.container {
+  background-color: #fff6ed;
+  border-radius: 1rem;
+  border: 2px solid rgba(255, 188, 122, 0.26);
+  width: 90vw;
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container.article-container {
+  border: none;
+  background: #fffaf5;
+}
+
+.container.nav-container {
+  height: 5rem;
+  background: #fff;
+}
+
+.container .nav-field {
+  width: 70%;
+  max-width: 192rem;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container .nav-field .nav-list {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+
+.container .nav-field .nav-list .nav-item {
+  user-select: none;
+  width: 100%;
+  transition: all 0.25s;
+}
+
+.container .nav-field .nav-list .nav-item.active {
+  border-radius: 999px;
+  background: #201830;
+}
+
+.container .nav-field .nav-list .nav-item:hover {
+  background-color: white;
+  border-radius: 999px;
+  background: #ff5b2e;
+  box-shadow: 0px 13px 26px -8px rgba(255, 91, 46, 0.42);
+}
+
+.container .nav-field .nav-list .nav-item.active .nav-link {
+  color: white;
+}
+
+.container .nav-field .nav-list .nav-item:hover .nav-link {
+  color: white;
+}
+
+.container .nav-field .nav-list .nav-item:hover .nav-link {
+  font-weight: 700;
+}
+
+.container .nav-field .nav-list .nav-item .nav-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: #1a162e;
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+
+article.field {
+  width: 300px;
+  min-height: 777px;
+  overflow: auto;
+  float: left;
+  margin-right: 0rem;
+  padding: 3rem 2.5rem 0rem 2.5rem;
+  border-radius: 1rem 2rem 2rem 1rem;
+  border: 2px solid rgba(255, 188, 122, 0.26);
+  background: #fff;
+  box-shadow: 0px 20px 44px 0px rgba(195, 108, 22, 0.06);
+  margin-top: 3rem;
+  margin-right: 3rem;
+}
+
+article.field .thumb {
+  float: left;
+  width: 18.75rem;
+  height: 18.75rem;
+  border-radius: 0.8rem;
+  background: url(<path-to-image>) lightgray -117.25px 0px / 243.243% 100% no-repeat;
+  margin-right: 1rem;
+}
+
+article.field .desc {
+  color: #656689;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.8rem;
+}
+
+.container.form-container {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.container.form-container .subs-form {
+  position: relative;
+  user-select: none;
+  margin-top: 2rem;
+  display: flex;
+  padding-left: 2rem;
+}
+
+.container.form-container .subs-form .email-submit-btn {
+  cursor: pointer;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4.5rem;
+  height: 4.6rem;
+  border-radius: 50%;
+  left: 28.5rem;
+  top: 0.2rem;
+  background-color: #ff5b2e;
+}
+
+.container.form-container label {
+  padding-left: 2rem;
+  color: #000958;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 2rem;
+}
+
+.container.form-container .subs-form input::placeholder {
+  color: #656689;
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1.4rem;
+}
+
+.container.form-container .subs-form input.email-input {
+  width: 300px;
+  height: 4.6rem;
+  outline: none;
+  border-radius: 2.3rem;
+  border: 1px solid rgba(255, 91, 46, 0.25);
+  opacity: 0.6;
+  background: #fff;
+  padding-left: 1rem;
+}
+
+.container.form-container .subs-form input.email-input:not(:placeholder-shown) {
+  opacity: 1;
+}
+
+.container.form-container
+  .subs-form
+  input.email-input:not(:placeholder-shown)
+  + .email-submit {
+  opacity: 1;
+}
+
+.container.form-container .subs-form input.email-submit {
+  user-select: none;
+  position: absolute;
+  cursor: pointer;
+  border: none;
+  z-index: 1;
+  left: 33.3rem;
+  top: 0rem;
+  width: 4.6rem;
+  height: 4.6rem;
+  border-radius: 50%;
+  background-color: transparent;
+  opacity: 0.6;
+  margin-left: -4.7rem;
+  margin-top: 0.2rem;
+}
+
+.container.form-container .subs-form .email-submit:hover + .email-submit-btn {
+  box-shadow: 0px 13px 26px -8px rgba(255, 91, 46, 0.42);
+}
