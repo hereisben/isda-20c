@@ -126,7 +126,6 @@ h2.heading {
 
 article.field {
   width: 300px;
-  min-height: 777px;
   overflow: auto;
   float: left;
   margin-right: 0rem;
@@ -137,6 +136,18 @@ article.field {
   box-shadow: 0px 20px 44px 0px rgba(195, 108, 22, 0.06);
   margin-top: 3rem;
   margin-right: 3rem;
+}
+
+#home article.field {
+  min-height: 777px;
+}
+
+#players article.field {
+  min-height: 795px;
+}
+
+#fans article.field {
+  min-height: 793px;
 }
 
 article.field .thumb {
@@ -158,6 +169,7 @@ article.field .desc {
 .container.form-container {
   padding-top: 3rem;
   padding-bottom: 3rem;
+  padding-left: 2rem;
 }
 
 .container.form-container .subs-form {
@@ -165,7 +177,6 @@ article.field .desc {
   user-select: none;
   margin-top: 2rem;
   display: flex;
-  padding-left: 2rem;
 }
 
 .container.form-container .subs-form .email-submit-btn {
@@ -187,21 +198,33 @@ article.field .desc {
 }
 
 .container.form-container label {
-  padding-left: 2rem;
   color: #000958;
   font-size: 2.2rem;
   font-weight: 600;
   line-height: 3.4rem; /* 154.545% */
 }
 
-.container.form-container .subs-form input::placeholder {
+.container.form-container label.sub-label {
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+}
+
+.container.form-container .desc {
+  width: 700px;
+  color: #656689;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.8rem;
+}
+
+.container.form-container form input::placeholder {
   color: #656689;
   font-size: 1.2rem;
   font-weight: 300;
   line-height: 1.4rem;
 }
 
-.container.form-container .subs-form input.email-input {
+.container.form-container form .info-getter {
   width: 300px;
   height: 4.6rem;
   outline: none;
@@ -212,7 +235,13 @@ article.field .desc {
   padding-left: 1rem;
 }
 
-.container.form-container .subs-form input.email-input:not(:placeholder-shown) {
+.container.form-container form .info-getter.fav-players-gettter {
+  width: 200px;
+  height: 2.3rem;
+  border-radius: 1rem;
+}
+
+.container.form-container form .info-getter:not(:placeholder-shown) {
   opacity: 1;
 }
 
@@ -244,11 +273,11 @@ article.field .desc {
   box-shadow: 0px 13px 26px -8px rgba(255, 91, 46, 0.42);
 }
 
-.container.form-container .subs-form.potm-form {
+.container.form-container .potm-form {
   display: flex;
 }
 
-.container.form-container .subs-form.potm-form .jar {
+.container.form-container form .jar {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -264,14 +293,12 @@ article.field .desc {
 }
 
 .container.form-container .subs-form.potm-form .jar label {
-  padding-left: 0rem;
   font-size: 1.8rem;
   font-weight: 600;
   line-height: 1.8rem; /* 100% */
 }
 
-.container.form-container .subs-form.potm-form .potm-submit {
-  margin-left: 5rem;
+.container.form-container form .submit-btn {
   cursor: pointer;
   width: 11.6rem;
   height: 4.8rem;
@@ -285,6 +312,92 @@ article.field .desc {
   line-height: 1.6rem; /* 100% */
 }
 
-.container.form-container .subs-form.potm-form .potm-submit:hover {
+.container.form-container form .potm-submit {
+  margin-left: 5rem;
+}
+
+.container.form-container form .submit-btn:hover {
   box-shadow: 0px 13px 26px -8px rgba(255, 91, 46, 0.42);
+}
+
+.container.form-container form .jar.join-jar {
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 1rem;
+}
+
+.container.form-container form label.sub-label {
+  margin-top: 2rem;
+}
+
+.container.form-container form .join-submit.submit-btn {
+  margin-top: 2rem;
+}
+
+.container.form-container form .sub-jar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.container.form-container form .sub-jar input {
+  margin: 0;
+  margin-top: 0.01rem;
+}
+
+.container.form-container form .sub-jar .checkbox-label {
+  color: #656689;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+}
+
+footer .container {
+  padding: 0rem 2rem 2rem 2rem;
+}
+
+footer .container h3 {
+  color: #000958;
+  font-family: "Sora", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 2rem; /* 111.111% */
+}
+
+footer .container .desc {
+  color: #656689;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 2.8rem; /* 200% */
+}
+
+footer .container .jar {
+}
+
+footer .container .jar ul {
+  display: flex;
+  gap: 1rem;
+}
+
+footer .container .jar ul li a {
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  width: 3.2rem;
+  height: 3.2rem;
+  background-color: white;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  box-shadow: 0px 16px 28px -10px rgba(211, 132, 53, 0.33);
+}
+
+footer .container .jar ul li a svg {
+  padding: 0.9rem;
+}
+
+footer .container .jar .sub-desc {
+  color: #000958;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.4rem; /* 116.667% */
 }
