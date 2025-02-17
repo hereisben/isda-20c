@@ -143,11 +143,11 @@ article.field {
 }
 
 #players article.field {
-  min-height: 795px;
+  min-height: 796px;
 }
 
 #fans article.field {
-  min-height: 793px;
+  min-height: 795px;
 }
 
 article.field .thumb {
