@@ -10,25 +10,33 @@
 
     <form
       style="border: solid 2px red; padding: 15px"
-      action="/action_page.php"
+      action="http://gophp.w3spaces.com/welcome.php"
+      method="get"
     >
-      <label for="fname">First name:</label><br />
+      <label for="fname">Name:</label><br />
       <input
         type="text"
-        id="fname"
-        name="fname"
-        placeholder="Enter your first name"
-        maxlength="4"
+        id="name"
+        name="name"
+        placeholder="Enter your name"
+        minlength="2"
+        required
       />
       <br />
-      <label for="lname">Last name:</label>
-      <br />
+      <label for="email">Name:</label><br />
       <input
-        type="text"
-        id="lname"
-        name="lname"
-        placeholder="Enter your last name"
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Enter your email"
+        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+        required
       />
+      <br />
+      <br />
+      <label for="color">Favorite Color:</label>
+      <input type="color" name="favColor" id="color" value="#ffffff" />
+      <br />
       <br />
       <label for="address">Address:</label>
       <br />
@@ -39,7 +47,7 @@
       <input type="radio" name="gender" id="male" value="male" />
       <label for="male">Male</label>
       <br />
-      <input type="radio" name="gender" id="female" value="female" required />
+      <input type="radio" name="gender" id="female" value="female" />
       <label for="female">Female</label>
       <br />
       <span>Visited Cities</span>
@@ -114,10 +122,6 @@
       <input type="date" name="birth-date" id="birth-date" />
       <br />
       <br />
-      <label for="color">Favorite Color:</label>
-      <input type="color" name="color" id="color" />
-      <br />
-      <br />
       <label for="digits">Last Four Digits of Credit Card:</label>
       <input type="number" name="quantity" id="digits" min="0000" max="9999" />
       <br />
@@ -133,7 +137,7 @@
 
     <p>
       If you click the "Submit" button, the form-data will be sent to a page
-      called "/action_page.php".
+      called "/welcome.php".
     </p>
   </body>
 </html>
